@@ -1,5 +1,5 @@
-# author: Tiffany Timbers
-# date: 2020-01-15
+# author: Son Chau
+# date: 2021-11-19
 
 "This script prints out docopt args.
 Usage: demo.R <arg1> --arg2=<arg2> [--arg3=<arg3>] [--arg4=<arg4>] 
@@ -12,8 +12,16 @@ Options:
 " -> doc
 
 library(docopt)
-opt <- docopt(doc)
-print(opt)
-print(typeof(opt))
-# print out agr4 value
-print(opt$arg4)
+
+# define main function
+main <- function() {
+    opt <- docopt(doc)
+    print(opt)
+    print(typeof(opt))
+    # print out agr4 value
+    print(opt$arg4)
+}
+
+
+# call main function
+main()
